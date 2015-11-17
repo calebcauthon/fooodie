@@ -1,0 +1,5 @@
+{{#each model as |post|}}
+  {{#blog-post title=post.title date=post.date}}
+    {{post.body}}
+  {{/blog-post}}
+{{/each}}
