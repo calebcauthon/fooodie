@@ -5,9 +5,10 @@ export default Ember.Controller.extend({
     removePost() {
       var self = this;
 
-      this.store.findRecord('post', this.model.id).then(function(post) {
-        post.destroyRecord();
-        self.transitionTo('blog');
+      this.store.find('post', this.model.id).then(function(post) {
+        post.destroyRecord().then(function() {
+          self.transitionTo('blog');
+        });
       });
 
       return false;
