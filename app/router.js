@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('favorites', { path: '/favs' });
   this.resource('post', function() {
     this.route('add');
+    this.route('remove', { path: '/:post_id' });
   });
 });
 
