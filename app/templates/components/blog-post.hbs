@@ -1,6 +1,7 @@
 <article class="blog-post">
   <h1>{{title}}</h1>
   {{#link-to 'post.remove' post}} delete {{/link-to}}
+  {{#link-to 'post.edit' post}} edit {{/link-to}}
   <h3>posted on: {{date}}</h3>
   <p>{{yield}}</p>
 </article>
