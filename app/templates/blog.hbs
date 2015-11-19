@@ -1,5 +1,8 @@
+{{#link-to 'post.add'}} Add a new blog post{{/link-to}}
+
 {{#each model as |post|}}
-  {{#blog-post title=post.title date=post.date}}
+  {{#blog-post title=post.title date=post.created_at}}
     {{post.body}}
   {{/blog-post}}
 {{/each}}
+

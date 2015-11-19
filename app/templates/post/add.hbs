@@ -1,0 +1,6 @@
+<form {{action "addPost" on="submit"}}>
+  Create a new blog post:<br />
+  Title: {{input type="text" value=title placeholder="Start typing.." }}<br />
+  Body: {{textarea value=body}} 
+  {{input type="submit" value="Add post" }}
+</form>
