@@ -1,8 +1,4 @@
 import Ember from 'ember';
 import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
-export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('post')
-  }
-});
+export default Ember.Route.extend(ApplicationRouteMixin);

@@ -13,6 +13,8 @@ Router.map(function() {
     this.route('remove', { path: '/remove/:post_id' });
     this.route('edit', { path: '/edit/:post_id' });
   });
+  this.route('login');
+  this.route('protected');
 });
 
 export default Router;

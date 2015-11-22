@@ -1,0 +1,7 @@
+<form {{action "updatePost" on="submit"}}>
+  Update blog post:<br />
+  Title: {{input type="text" value=model.title }}<br />
+  Body: {{textarea value=model.body}} <br />
+  {{input type="submit" value="Save post" }}
+  <button {{action "goToBlog" on="click" }}>Cancel</button>
+</form>
