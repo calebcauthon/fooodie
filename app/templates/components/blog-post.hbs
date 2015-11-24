@@ -1,9 +1,15 @@
+<div class="post-preview">
+    <a href="post.html">
+        <h2 class="post-title">
+            {{title}}
+            {{#link-to 'post.remove' post}} delete {{/link-to}}
+            {{#link-to 'post.edit' post}} edit {{/link-to}}
+        </h2>
+        <h3 class="post-subtitle">
+            {{subtitle}}
+        </h3>
+    </a>
+    <p class="post-meta">Posted by <a href="#">{{post.user.email}}</a> on {{pretty-date date}}</p>
+
+</div>
 <hr />
-<article class="blog-post">
-  <h1>{{title}}</h1>
-  {{pretty-date date}} by {{post.user.email}}
-  {{#link-to 'post.remove' post}} delete {{/link-to}}
-  {{#link-to 'post.edit' post}} edit {{/link-to}}
-  
-  <p>{{yield}}</p>
-</article>
