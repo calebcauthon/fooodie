@@ -2,8 +2,10 @@
     {{#link-to 'post.view' post}}
         <h2 class="post-title">
             {{post.title}}
-            {{#link-to 'post.remove' post}} delete {{/link-to}}
-            {{#link-to 'post.edit' post}} edit {{/link-to}}
+            {{#if session.isAuthenticated}}
+                {{#link-to 'post.remove' post}} delete {{/link-to}}
+                {{#link-to 'post.edit' post}} edit {{/link-to}}
+            {{/if}}
         </h2>
         <h3 class="post-subtitle">
             {{post.subtitle}}

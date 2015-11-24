@@ -6,6 +6,8 @@ export default Ember.Controller.extend({
     logout() {
       if(this.get('session').invalidate)
         this.get('session').invalidate();
+
+      this.transitionTo('blog');
     }
   }
 });

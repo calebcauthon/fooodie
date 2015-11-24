@@ -15,7 +15,6 @@ Router.map(function() {
     this.route('edit', { path: '/edit/:post_id' });
   });
   this.route('login');
-  this.route('protected');
 });
 
 export default Router;
