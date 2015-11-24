@@ -7,6 +7,13 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+
+
+  app.import('bower_components/rails-csrf/dist/named-amd/main.js', {
+    'rails-csrf': [
+      'service'
+    ]
+  });
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

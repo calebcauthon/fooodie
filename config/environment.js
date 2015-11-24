@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+      'connect-src': "*"
+    },
     modulePrefix: 'fooodie',
     environment: environment,
     baseURL: '/',
@@ -43,9 +46,10 @@ module.exports = function(environment) {
 
   }
 
-  ENV['simple-auth'] = {    
-    authorizer: 'simple-auth-authorizer:devise'   
-  };      
+  ENV['ember-simple-auth'] = {    
+    routeAfterAuthentication: 'blog',
+    routeIfAlreadyAuthenticated: 'blog'
+  };
 
   return ENV;
 };

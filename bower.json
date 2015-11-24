@@ -12,6 +12,11 @@
     "jquery": "^1.11.3",
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.20.0",
-    "ember-simple-auth": "0.8.0"
+    "rails-csrf": "0.0.5",
+    "active-model-adapter": "~2.0.3"
+  },
+  "resolutions": {
+    "qunit-notifications": "~0.0.3",
+    "loader.js": "1.0.1"
   }
 }
