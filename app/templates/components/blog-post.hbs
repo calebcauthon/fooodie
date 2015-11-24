@@ -1,6 +1,7 @@
+<hr />
 <article class="blog-post">
   <h1>{{title}}</h1>
-  {{date}} by {{post.user.email}}
+  {{pretty-date date}} by {{post.user.email}}
   {{#link-to 'post.remove' post}} delete {{/link-to}}
   {{#link-to 'post.edit' post}} edit {{/link-to}}
   

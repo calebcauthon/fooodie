@@ -9,11 +9,8 @@ module.exports = function(defaults) {
 
 
 
-  app.import('bower_components/rails-csrf/dist/named-amd/main.js', {
-    'rails-csrf': [
-      'service'
-    ]
-  });
+  app.import('vendor/moment.min.js');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
