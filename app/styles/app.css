@@ -1,3 +1,5 @@
 .post-title a { font-size: 14px; }
 textarea.edit-post { width: 100%;  }
 .post-heading textarea { width: 100%; font-size: 55px; color: inherit; background: none; font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif; font-weight: 800; }
+
+.site-heading input { color: black; }
