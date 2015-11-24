@@ -20,6 +20,8 @@ Router.map(function() {
   this.route('recipe', function() {
     this.route('view', { path: '/view/:recipe_id' });
     this.route('add');
+    this.route('remove', { path: '/remove/:recipe_id' });
+    this.route('edit', { path: '/edit/:recipe_id' });
   });
 
   this.route('login');

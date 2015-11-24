@@ -20,6 +20,11 @@
               {{#link-to 'recipe.view' recipe}}
                 {{recipe.title}}
               {{/link-to}}
+
+              {{#if session.isAuthenticated}}
+                  {{#link-to 'recipe.remove' recipe class='small-text'}} delete {{/link-to}}
+                  {{#link-to 'recipe.edit' recipe class='small-text'}} edit {{/link-to}}
+              {{/if}}
             </h1>
           {{/each}}  
         </div>
