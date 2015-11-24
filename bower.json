@@ -17,6 +17,7 @@
   },
   "resolutions": {
     "qunit-notifications": "~0.0.3",
-    "loader.js": "1.0.1"
+    "loader.js": "1.0.1",
+    "ember": "1.13.10"
   }
 }
