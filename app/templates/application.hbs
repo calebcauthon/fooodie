@@ -19,8 +19,16 @@
                     {{#link-to 'blog'}} Blog {{/link-to}}
                 </li>
                 <li>
+                    {{#link-to 'recipes'}} Recipes {{/link-to}}
+                </li>
+                <li>
                   {{#if session.isAuthenticated}}
                     {{#link-to 'post.add'}} Add a new blog post{{/link-to}}
+                  {{/if}}
+                </li>
+                <li>
+                  {{#if session.isAuthenticated}}
+                    {{#link-to 'recipe.add'}} Add a new recipe{{/link-to}}
                   {{/if}}
                 </li>
                 <li>
