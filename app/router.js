@@ -24,6 +24,8 @@ Router.map(function() {
     this.route('edit', { path: '/edit/:recipe_id' });
   });
 
+  this.route('users', { path: '/users' })
+
   this.route('login');
 });
 

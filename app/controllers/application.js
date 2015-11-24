@@ -9,5 +9,8 @@ export default Ember.Controller.extend({
 
       this.transitionTo('blog');
     }
-  }
+  },
+  isAdmin: function() {
+    return this.get('session').isAuthenticated && this.get('session').get('data').authenticated.admin
+  }.observes('session')
 });
