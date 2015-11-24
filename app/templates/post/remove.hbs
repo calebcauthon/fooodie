@@ -5,7 +5,9 @@
                 <div class="post-heading">
                     <h1>Are you sure you want to delete this post?</h1>
                     <button {{action "removePost" on="click" }} class="btn btn-default">Yes, I'm sure</button>
-                    <button {{action "showBlog" on="click" }} class="btn btn-default">No</button>
+                    {{#link-to 'blog'}}
+                        <button class="btn btn-default">No</button>
+                    {{/link-to}}
                 </div>
             </div>
         </div>

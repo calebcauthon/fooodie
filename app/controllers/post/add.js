@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   email: function() {
     return this.get('session').get('data').authenticated.email;
   }.property('session'),
+  needs: 'post',
   actions: {
     addPost() {
       var self = this;
