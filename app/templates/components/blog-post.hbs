@@ -1,7 +1,7 @@
 <div class="post-preview">
     <a href="post.html">
         <h2 class="post-title">
-            {{title}}
+            {{post.title}}
             {{#link-to 'post.remove' post}} delete {{/link-to}}
             {{#link-to 'post.edit' post}} edit {{/link-to}}
         </h2>
@@ -9,7 +9,7 @@
             {{post.subtitle}}
         </h3>
     </a>
-    <p class="post-meta">Posted by <a href="#">{{post.user.email}}</a> on {{pretty-date date}}</p>
+    <p class="post-meta">Posted by <a href="#">{{post.user.email}}</a> on {{pretty-date post.date}}</p>
 
 </div>
 <hr />
