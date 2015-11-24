@@ -2,9 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    showBlog() {
-      this.transitionTo('blog');
-    },
     removePost() {
       var self = this;
 

@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service('session'),
+  email: function() {
+    return this.get('session').get('data').authenticated.email;
+  }.property('session'),
   actions: {
     addPost() {
       var self = this;

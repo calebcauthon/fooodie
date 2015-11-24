@@ -1,6 +1,27 @@
 <form {{action "addPost" on="submit"}}>
-  Create a new blog post:<br />
-  Title: {{input type="text" value=title placeholder="Start typing.." }}<br />
-  Body: {{textarea value=body}} 
-  {{input type="submit" value="Add post" }}
+  <header class="intro-header" style="background-image: url('assets/images/home-bg.jpg')">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="post-heading">
+                      {{textarea value=title placeholder="Title goes here" }}
+                      <span class="meta">Posted by <a href="#">{{email}}</a> on {{pretty-date model.created_date}}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {{textarea class="edit-post" value=body}}<br />
+            
+            {{input type="submit" class="btn btn-default" value="Publish"}}
+            <button {{action "showBlog" on="click" }} class="btn btn-default">Cancel</button>
+          </div>
+      </div>
+  </div>
 </form>
+  
