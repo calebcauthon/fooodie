@@ -15,7 +15,8 @@ export default Ember.Controller.extend({
         body: this.get('body')
       });
 
-      post.save().then(function() {
+      post.save().then(function(post) {
+        self.store.createRecord('activity', { name: 'Add blog post ('+post.get('title')+')', item_type: 'post.view', item: post.id }).save();
         self.transitionToRoute('blog')
       });
 

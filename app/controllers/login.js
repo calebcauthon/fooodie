@@ -7,8 +7,11 @@ export default Ember.Controller.extend({
 
   actions: {
     authenticate: function() {
+      var self = this;
       let { identification, password } = this.getProperties('identification', 'password');
-      return this.get('session').authenticate('authenticator:devise', identification, password).catch((reason) => {
+      return this.get('session').authenticate('authenticator:devise', identification, password).then(() => {
+        self.store.createRecord('activity', { name: 'Logged in' }).save();
+      }).catch((reason) => {
         this.set('errorMessage', reason.error);
       });
     }

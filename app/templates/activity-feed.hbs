@@ -22,9 +22,13 @@
               <th>When</th>
             </thead>
             <tbody>
-              {{#each model as |activity|}}
+              {{#each sortedModel as |activity|}}
                 <tr>
-                  <td>{{activity.name}}</td>
+                  <td>
+                    {{#link-to activity.item_type activity.item }}
+                      {{activity.name}}
+                    {{/link-to}}
+                  </td>
                   <td>{{pretty-date activity.created_at}}</td>
                 </tr>
               {{/each}}  

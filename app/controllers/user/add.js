@@ -15,7 +15,8 @@ export default Ember.Controller.extend({
         password_confirmation: this.get('newUserPasswordConfirmation'),
       });
 
-      user.save().then(function() {
+      user.save().then(function(user) {
+        self.store.createRecord('activity', { name: 'Add user ('+user.get('email')+')', item_type: 'users' }).save();
         self.transitionToRoute('users');
       });
 

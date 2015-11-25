@@ -14,7 +14,8 @@ export default Ember.Controller.extend({
         body: this.get('body')
       });
 
-      recipe.save().then(function() {
+      recipe.save().then(function(recipe) {
+        self.store.createRecord('activity', { name: 'Add recipe ('+recipe.get('title')+')', item_type: 'recipe.view', item: recipe.id }).save();
         self.transitionToRoute('recipes')
       });
 
