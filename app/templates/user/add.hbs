@@ -1,0 +1,41 @@
+
+  <header class="intro-header" style="background-image: url('assets/images/home-bg.jpg')">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="post-heading small">
+                    <h2>Add User</h2>
+                </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <form {{action 'addUser' on='submit'}} class="form-horizontal">
+              <div class="form-group">
+                <label for='email'>Email</label>
+                {{input id='email' placeholder='Enter Login' value=newUserEmail}}
+              </div>
+              <div class="form-group">
+                <label for='newUserPassword'>Password</label>
+                {{input id='newUserPassword' placeholder='Enter Password' type='password' value=newUserPassword}}
+              </div>
+              <div class="form-group">
+                <label for='newUserPasswordConfirm'>Password Again</label>
+                {{input id='newUserPasswordConfirm' placeholder='Enter Password' type='password' value=newUserPasswordConfirm}}
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+              {{#link-to 'users'}}
+                <button class="btn btn-default">Cancel</button>
+              {{/link-to}}
+            </form>
+
+            
+          </div>
+      </div>
+  </div>
+  

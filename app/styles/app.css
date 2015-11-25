@@ -6,3 +6,5 @@ textarea.edit-post { width: 100%;  }
 .site-heading input { color: black; }
 
 .intro-header .site-heading.small, .intro-header .post-heading.small, .intro-header .page-heading.small { padding: 0 0; }
+tr.confirm-removal { }
+tr.confirm-removal td { background: red; color: white; }

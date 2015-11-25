@@ -25,6 +25,10 @@ Router.map(function() {
   });
 
   this.route('users', { path: '/users' })
+  this.route('user', function() {
+    this.route('remove', { path: '/remove/:user_id' });
+    this.route('add');
+  });
 
   this.route('login');
 });

@@ -14,6 +14,11 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          {{#link-to 'user.add'}}
+            <button type="button" class="btn btn-default">Add user</button>
+          {{/link-to}}
+          <br />
+          <br />
           <table class="table table-striped"> 
             <thead>
               <th>Email</th>
@@ -21,9 +26,17 @@
             </thead>
             <tbody>
               {{#each model as |user|}}
-                <tr>
+                <tr {{bind-attr class="user.confirmRemoval:confirm-removal" }}>
                   <td>{{user.email}}</td>
                   <td>{{user.role}}</td>
+                  <td>
+                    {{#if user.confirmRemoval}}
+                      <button {{action 'remove' user on='click' }}class="btn btn-default">Yes, I'm sure</button>
+                      <button {{action 'declineRemoval' user on='click' }}class="btn btn-default">Cancel</button>
+                    {{else}}
+                      <button {{action 'confirmRemoval' user on='click' }}class="btn btn-default">Remove</button>
+                    {{/if}}
+                  </td>
                 </tr>
               {{/each}}  
             </tbody>

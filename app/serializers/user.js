@@ -6,6 +6,9 @@ export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
   normalizeQueryResponse(store, clazz, payload) {
     return this._super(store, clazz, payload);
   },
+  normalizeCreateRecordResponse(store, clazz, payload) {
+    return this._super(store, clazz, {});
+  },
 
   serializeIntoHash(data, type, record, options) {
     var root = Ember.String.decamelize(type.modelName);
