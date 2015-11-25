@@ -10,7 +10,13 @@ export default Ember.Controller.extend({
       this.transitionTo('blog');
     }
   },
-  isAdmin: function() {
-    return this.get('session').isAuthenticated && this.get('session').get('data').authenticated.admin
-  }.observes('session')
+  onSessionIsAuthenticated: function () {
+    var isAdmin = this.get('session').isAuthenticated && this.get('session').get('data').authenticated.admin;
+    this.set('isAdmin', isAdmin);
+
+  }.observes('session.data.authenticated.email'),
+
+  init: function() { 
+    this.set('isAdmin', this.get('session').isAuthenticated && this.get('session').get('data').authenticated.admin);
+  }
 });
