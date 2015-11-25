@@ -1,0 +1,35 @@
+
+  <header class="intro-header" style="background-image: url('assets/images/home-bg.jpg')">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="post-heading small">
+                    <h2>Activity Feed</h2>
+                </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <table class="table table-striped"> 
+            <thead>
+              <th>Name</th>
+              <th>When</th>
+            </thead>
+            <tbody>
+              {{#each model as |activity|}}
+                <tr>
+                  <td>{{activity.name}}</td>
+                  <td>{{pretty-date activity.created_at}}</td>
+                </tr>
+              {{/each}}  
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>

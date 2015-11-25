@@ -30,6 +30,7 @@ Router.map(function() {
     this.route('add');
   });
 
+  this.route('activity-feed', { path: '/activity-feed' });
   this.route('login');
 });
 

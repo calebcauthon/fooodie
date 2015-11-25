@@ -6,5 +6,6 @@ export default DS.Model.extend({
   email: DS.attr(),
   role: DS.attr(),
   password: DS.attr(),
-  password_confirmation: DS.attr()
+  password_confirmation: DS.attr(),
+  activity: DS.hasMany('activities')
 });

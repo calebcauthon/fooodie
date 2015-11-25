@@ -22,6 +22,11 @@
                     {{#link-to 'recipes'}} Recipes {{/link-to}}
                 </li>
                 <li>
+                  {{#if session.isAuthenticated}}
+                    {{#link-to 'activity-feed'}} Activity Feed{{/link-to}}
+                  {{/if}}
+                </li>
+                <li>
                   {{#if isAdmin}}
                     {{#link-to 'users'}} Users{{/link-to}}
                   {{/if}}
