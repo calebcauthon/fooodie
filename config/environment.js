@@ -3,7 +3,8 @@
 module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
-      'connect-src': "*"
+      'connect-src': "*",
+      'style-src': "'self' 'unsafe-inline'"
     },
     modulePrefix: 'fooodie',
     environment: environment,
